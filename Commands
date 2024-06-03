@@ -8,6 +8,7 @@ git config --global user.name "Akash Sharma"
 git config --global user.email "akash007XX@gmail.com"
 git config --global --list
 git config --global --edit // toedit the global config
+git commit --amend --reset-author // to amend the config for previous commits
 
 // git will store the global config settings in "~/.gitconfig" file in users home directory.
 // minimum required configuration in order to start using Git? Name and Email
