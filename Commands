@@ -7,6 +7,7 @@ git help // will open editor in terminal for linux and mac , while for windows w
 git config --global user.name "Akash Sharma"
 git config --global user.email "akash007XX@gmail.com"
 git config --global --list
+git config --global --edit // toedit the global config
 
 // git will store the global config settings in "~/.gitconfig" file in users home directory.
 // minimum required configuration in order to start using Git? Name and Email
