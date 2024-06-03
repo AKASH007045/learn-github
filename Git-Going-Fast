@@ -6,9 +6,9 @@
 4. Working locally
 5. Working on github
 
-*> Key Concept*
+## *> Key Concept*
 
-## Git : is distribuuted and de-centralised Source Control system. However it could be centralised.
+### Git : is distribuuted and de-centralised Source Control system. However it could be centralised.
 Under Git we version snapshot not versioning specific files and folders.
 
 ##### Commits : are saved changes to Git repositories. These are uniquely identified by sha1 hash.
@@ -24,16 +24,18 @@ Under Git we version snapshot not versioning specific files and folders.
 
 > Git's staging area is sometimes referred to as the index
 
-*> Setup*
+## *> Setup*
 
 ## Git Configuration
 git config --global user.name "Akash Sharma"
+
 git config --global user.email "akash007XX@gmail.com"
+
 git config --global --list
 
-*> Project Initialise*
+## *> Project Initialise*
 
-## Workflow
+#### Workflow
     Step 1: `git init` >> create a new file >> `git status` (Initial commit, untracked files present, nothing added to commit).
 
 > Use `git restore <file>` or `git checkout -- <filename>` to discard changes in working directory.
@@ -44,32 +46,40 @@ git config --global --list
 
     Step 3: `git commit -m "first commit` (nothing to commit, working directory clean)
 
-*> Working on github*
+## *> Working on github*
 
-## Going Remote
+### Going Remote
 ##### Setting up SSH Authentication
 *Step 1: Generating an SSH Key*
 
 `ssh-keygen -t rsa -C "your.name@your-company.com"`  # Use your actual email address in the example above.
-here,
--C stands for comment to help identify your ssh key
--f stands for the file name where your ssh key get saved
+
+Here,
+
+-C stands for comment to help identify your ssh key.
+
+-f stands for the file name where your ssh key get saved.
 
 *Step 2 : Add SSH keys to SSH Agent*
+
 <ssh-keygen -t rsa -C "your-email-address" -f "filename-ssh">
 
 *Step 3 : Add SSH public key to the Github*
 Paste the public key on Github
 
 > Sign in to Github Account.
+
 > Goto Settings > SSH and GPG keys > New SSH Key
+
 > Paste your copied public key and give it a Title of your choice.
 
 *Step 4 : Create a Config File and Make Host Entries*
+
 <vi ~/.ssh/config>
 
 
 *Step 5: Verify SSH authentication*
+
 `ssh -T git@github.com`
 
 Above command uses ssh to connect to GitHub over the SSH protocol.
