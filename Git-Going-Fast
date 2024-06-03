@@ -1,0 +1,31 @@
+## Udemy Course
+
+Course Overview
+1. Key Concept
+2. Setup
+3. Project Initialise
+4. Working locally
+5. Working on github
+
+Git : is distribuuted and Centralised Source Control system. However it cold be centralised.
+Under Git we version snapshot not versioning specific files and folders
+Commits : are saved changes to Git repositories. These are uniquely identified by sha1 hash.
+
+Branches : are timeline with commit. Default is master.
+Head: is pointer to last commit on current branch
+remote: pointer to remote repository. (Not local)
+
+Git Workflow : 
+
+init >>  work >> stage changes using add command >> commit changes in staging area using commit command >> push to remote repo using push command --> pull down is require to see others changes
+
+########
+### Git Configuration
+git config --global user.name "Akash Sharma"
+git config --global user.email "akash007XX@gmail.com"
+git config --global --list
+
+## Workflow
+git init >> create a new file >> git status (Initial commit, untracked files present, nothing added to commit)
+git add >>  git status (Initial commit, changes to be commited) // use git rm cached <file> (to unstage) // its currently in staging area
+git commit -m "first commit" (nothing to commit, working directory clean)

@@ -1,0 +1,23 @@
+## git Commands
+
+git help // will open editor in terminal for linux and mac , while for windows will open the help page in browser.
+        git help config
+
+### Git Configuration
+git config --global user.name "Akash Sharma"
+git config --global user.email "akash007XX@gmail.com"
+git config --global --list
+
+// git will store the global config settings in "~/.gitconfig" file in users home directory.
+// minimum required configuration in order to start using Git? Name and Email
+
+## Starting fresh
+git init reponame
+        git init learngit //it will initialise a new git repository by the name learngit. Which will have a new folder name .git >> which contains files
+                HEAD (f)
+                config (f)
+                description (f)
+                hooks (d)
+                info (d)
+                objects (d)
+                refs (d)
