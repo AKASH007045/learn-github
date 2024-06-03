@@ -19,6 +19,8 @@ Git Workflow :
 
 init >>  work >> stage changes using add command >> commit changes in staging area using commit command >> push to remote repo using push command --> pull down is require to see others changes
 
+//Files must pass through Git's staging area before being committed.
+//Git's staging area is sometimes referred to as the index
 ########
 ### Git Configuration
 git config --global user.name "Akash Sharma"
@@ -26,6 +28,27 @@ git config --global user.email "akash007XX@gmail.com"
 git config --global --list
 
 ## Workflow
-git init >> create a new file >> git status (Initial commit, untracked files present, nothing added to commit)
-git add >>  git status (Initial commit, changes to be commited) // use git rm cached <file> (to unstage) // its currently in staging area
+git init >> create a new file >> git status (Initial commit, untracked files present, nothing added to commit) use "git restore <file>..." to discard changes in working directory) or git checkout -- <filename> to discard changes in working directory.
+
+git add >>  git status (Initial commit, changes to be commited) // use "git rm cached <file>" (to unstage) // its currently in staging area or "git reset head <filename>" to unstage or use "git restore --staged <file>..." to unstage
+
 git commit -m "first commit" (nothing to commit, working directory clean)
+
+## Going Remote
+### Setting up SSH Authentication
+Generating an SSH Key
+
+ssh-keygen -t rsa -C "your.name@your-company.com"
+Use your actual email address in the example above.
+
+Add SSH public key to the Github
+Paste the public key on Github
+
+Sign in to Github Account
+Goto Settings > SSH and GPG keys > New SSH Key
+Paste your copied public key and give it a Title of your choice.
+
+Verify SSH authentication
+
+ssh -T git@github.com
+Above command uses ssh to connect to GitHub over the SSH protocol.
