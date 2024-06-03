@@ -6,48 +6,70 @@
 4. Working locally
 5. Working on github
 
+*> Key Concept*
+
 ## Git : is distribuuted and de-centralised Source Control system. However it could be centralised.
-Under Git we version snapshot not versioning specific files and folders
+Under Git we version snapshot not versioning specific files and folders.
 
-### Commits : are saved changes to Git repositories. These are uniquely identified by sha1 hash.
-### Branches : are timeline with commit. Default is master/main.
-### Head: is pointer to last commit on current branch
-### remote: pointer to remote repository. (Not local)
+##### Commits : are saved changes to Git repositories. These are uniquely identified by sha1 hash.
+##### Branches : are timeline with commit. Default is master/main.
+##### Head: is pointer to last commit on current branch
+##### remote: pointer to remote repository. (Not local)
 
-## Git Workflow : 
+### Git Workflow 
 
-init >>  work >> stage changes using add command >> commit changes in staging area using commit command >> push to remote repo using push command --> pull down is require to see others changes
+`git init` >>  work on project by adding new files >> stage changes using `git add` command >> commit changes in staging area using `git commit` command >> push to remote repo using `git push` command >> pull down is require to see others changes by `git pull`
 
 > Files must pass through Git's staging area before being committed.
+
 > Git's staging area is sometimes referred to as the index
+
+*> Setup*
 
 ## Git Configuration
 git config --global user.name "Akash Sharma"
 git config --global user.email "akash007XX@gmail.com"
 git config --global --list
 
+*> Project Initialise*
+
 ## Workflow
-git init >> create a new file >> git status (Initial commit, untracked files present, nothing added to commit) use "git restore <file>..." to discard changes in working directory) or git checkout -- <filename> to discard changes in working directory.
+    Step 1: `git init` >> create a new file >> `git status` (Initial commit, untracked files present, nothing added to commit).
 
-git add >>  git status (Initial commit, changes to be commited) // use "git rm cached <file>" (to unstage) // its currently in staging area or "git reset head <filename>" to unstage or use "git restore --staged <file>..." to unstage
+> Use `git restore <file>` or `git checkout -- <filename>` to discard changes in working directory.
 
-git commit -m "first commit" (nothing to commit, working directory clean)
+    Step 2: `git add` >>  `git status` (Initial commit, changes to be commited) -- After git add changes are in staging area
+    
+> Use `git rm cached <file>` or `git reset head <filename` or `git restore --staged <file>`(to unstage)
+
+    Step 3: `git commit -m "first commit` (nothing to commit, working directory clean)
+
+*> Working on github*
 
 ## Going Remote
-### Setting up SSH Authentication
-Generating an SSH Key
+##### Setting up SSH Authentication
+*Step 1: Generating an SSH Key*
 
-ssh-keygen -t rsa -C "your.name@your-company.com"
-Use your actual email address in the example above.
+`ssh-keygen -t rsa -C "your.name@your-company.com"`  # Use your actual email address in the example above.
+here,
+-C stands for comment to help identify your ssh key
+-f stands for the file name where your ssh key get saved
 
-Add SSH public key to the Github
+*Step 2 : Add SSH keys to SSH Agent*
+<ssh-keygen -t rsa -C "your-email-address" -f "filename-ssh">
+
+*Step 3 : Add SSH public key to the Github*
 Paste the public key on Github
 
-Sign in to Github Account
-Goto Settings > SSH and GPG keys > New SSH Key
-Paste your copied public key and give it a Title of your choice.
+> Sign in to Github Account.
+> Goto Settings > SSH and GPG keys > New SSH Key
+> Paste your copied public key and give it a Title of your choice.
 
-Verify SSH authentication
+*Step 4 : Create a Config File and Make Host Entries*
+<vi ~/.ssh/config>
 
-ssh -T git@github.com
+
+*Step 5: Verify SSH authentication*
+`ssh -T git@github.com`
+
 Above command uses ssh to connect to GitHub over the SSH protocol.
