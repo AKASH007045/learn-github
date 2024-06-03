@@ -1,7 +1,7 @@
-## git Commands
+# git Commands
 
-git help // will open editor in terminal for linux and mac , while for windows will open the help page in browser.
-        git help config
+git help > // will open editor in terminal for linux and mac , while for windows will open the help page in browser.
+        `git help config`
 
 ### Git Configuration
 git config --global user.name "Akash Sharma"
